@@ -23,6 +23,11 @@
 #define FAN_HI  3
 #define FAN_MED 2
 #define FAN_LOW 1
+#define FAN_OFF 0
+
+#define MIN_COOLDOWN 400
+
+#define DEFAULT_FAN_ID 6
 
 const char *fanStateTable[4] = {
   "off",
@@ -37,7 +42,6 @@ int prot;            // int to save Protocol number
 
 struct fan {
   bool lightState;
-  bool fanState;
   uint8_t fanSpeed;
 };
 
@@ -63,6 +67,8 @@ const char *idStrings[16] = {
 };
 
 char idchars[] = "01";
+
+unsigned long cooldown;
 
 RCSwitch mySwitch = RCSwitch();
 WiFiClient espClient;

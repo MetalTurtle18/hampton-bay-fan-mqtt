@@ -16,9 +16,6 @@
 // ===================================================================
 #define LOGGING_TOPIC BASE_TOPIC "/log"
 #define STATUS_TOPIC BASE_TOPIC "/status"
-#define LOGGING_TOPIC BASE_TOPIC "/logs"
-#define SUBSCRIBE_TOPIC_ON_SET BASE_TOPIC "/+/on/set"
-#define SUBSCRIBE_TOPIC_ON_STATE BASE_TOPIC "/+/on/state"
 #define SUBSCRIBE_TOPIC_SPEED_SET BASE_TOPIC "/+/speed/set"
 #define SUBSCRIBE_TOPIC_SPEED_STATE BASE_TOPIC "/+/speed/state"
 #define SUBSCRIBE_TOPIC_LIGHT_SET BASE_TOPIC "/+/light/set"
@@ -29,8 +26,9 @@
 // Configure CC1101
 // ===================================================================
 // 303.631 - (original) determined from FAN-9T remote tramsmissions
-// 303.875 - (personal) this seems to work for my fans
-#define RF_FREQUENCY    303.875
+// 303.875 - (personal - rniemand) this seems to work for my fans
+// 303.848 - (personal - metalturtle) this seems to work for my fans
+#define RF_FREQUENCY    303.848
 #define RF_PROTOCOL     11
 #define RF_REPEATS      8
 #define RF_PULSE_LENGTH 320
@@ -39,4 +37,4 @@
 // ===================================================================
 // Optional configuration
 // ===================================================================
-#define DEBUG_MODE false
+#define DEBUG_MODE true
